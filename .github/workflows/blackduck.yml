@@ -42,4 +42,3 @@ jobs:
          DETECT_PROJECT_APPLICATION_ID: '248981' 
          DETECT_PROJECT_TAGS: "bottomzone,contractors,internal,nexus,nonmodifiedoss,notdistributed"
          DETECT_WAIT_FOR_RESULTS: true
-#          DETECT_TIMEOUT: 600
