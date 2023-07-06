@@ -2,15 +2,15 @@ name: Synopsys-Actions
 on:
   push:
     branches: 
-    - main
+    - master
   pull_request:
     types: [blackduck_automation_fixpr]
     branches:
-    - main
+    - master
   pull_request_review_comment:
     types: [blackduck_automation_fixpr]
     branches:
-    - main
+    - master
    
   workflow_dispatch:
 jobs:
