@@ -36,10 +36,10 @@ jobs:
 
       
       env: 
-         DETECT_PROJECT_NAME: "Blackduck-Synopsys-Action-Example-NodeJS"
-         DETECT_PROJECT_VERSION_NAME: ${GITHUB_RUN_NUMBER}
+         DETECT_PROJECT_NAME: "Blackduck-Synopsys-Action-Example-NodeJS-Webgoat"
+         DETECT_PROJECT_VERSION_NAME: "1.0"
          DETECT_TOOLS_EXCLUDED: 'SIGNATURE_SCAN'
          BLACKDUCK_TRUST_CERT: true
-         DETECT_PROJECT_APPLICATION_ID: '248981' 
-         DETECT_PROJECT_TAGS: "bottomzone,contractors,internal,nexus,nonmodifiedoss,notdistributed"
+         DETECT_PROJECT_APPLICATION_ID: '248982' 
+         DETECT_PROJECT_TAGS: "bottomzone,contractors,internal,nexus,nonmodifiedoss,notdistributed,weboat"
          DETECT_WAIT_FOR_RESULTS: true
