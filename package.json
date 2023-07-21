@@ -1,7 +1,7 @@
 {
-  "name": "owasp-nodejs-goat",
+  "name": "owasp-nodejs-goat1",
   "private": true,
-  "version": "1.3.0",
+  "version": "1.9.0",
   "description": "A tool to learn OWASP Top 10 for node.js developers",
   "main": "server.js",
   "dependencies": {
