@@ -19,7 +19,7 @@ jobs:
         uses: synopsys-sig/synopsys-action@v1.2.0
         ### Use below configurations to set specific detect environment varibales
         env:
-          DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
+          DETECT_PROJECT_NAME: spurohitsynopsys-${{ github.event.repository.name }}
           DETECT_PROJECT_VERSION_NAME: ${{ github.ref_name }}
           DETECT_CODE_LOCATION_NAME: ${{ github.event.repository.name }}-${{ github.ref_name }}
         with:
@@ -39,7 +39,7 @@ jobs:
         uses: synopsys-sig/synopsys-action@v1.2.0
         ### Use below configurations to set specific detect environment varibales
         env:
-          DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
+          DETECT_PROJECT_NAME: spurohitsynopsys-${{ github.event.repository.name }}
           DETECT_PROJECT_VERSION_NAME: ${{ github.base_ref }}
           DETECT_CODE_LOCATION_NAME: ${{ github.event.repository.name }}-${{ github.base_ref }}
         with:
