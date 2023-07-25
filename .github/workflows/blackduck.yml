@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Coverity Full Scan
         if: ${{ github.event_name != 'pull_request' }}
-        uses: synopsys-sig/synopsys-action@vmain
+        uses: synopsys-sig/synopsys-action@main
         with:
           synopsys_bridge_install_directory: "/home/spurohit/airgap"
           bridge_download_version: "0.3.1"
