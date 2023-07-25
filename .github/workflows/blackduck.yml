@@ -26,7 +26,7 @@ jobs:
 #           network_air_gap: false
           synopsys_bridge_install_directory: "/Users/spurohit/airgap-directory-test"
 #           bridge_download_url: "https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-bridge/0.3.59/synopsys-bridge-0.3.59-macosx.zip"
-          bridge_download_version: "0.2.55"
+#           bridge_download_version: "0.2.55"
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
           blackduck_scan_full: true
