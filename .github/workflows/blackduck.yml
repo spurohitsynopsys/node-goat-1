@@ -23,9 +23,9 @@ jobs:
           DETECT_PROJECT_VERSION_NAME: ${{ github.ref_name }}
           DETECT_CODE_LOCATION_NAME: ${{ github.event.repository.name }}-${{ github.ref_name }}
         with:
-          network_air_gap: true
+#           network_air_gap: true
 #           synopsys_bridge_install_directory: "/home/spurohit/airgap"
-#           bridge_download_url: "https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
+          bridge_download_url: "https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
 #           bridge_download_version: "0.3.1"
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
@@ -33,8 +33,8 @@ jobs:
           ### Accepts Multiple Values
           blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
           ### Uncomment below configuration to enable autoamtic fix pull request creation if vulnerabilities are reported
-          blackduck_automation_fixpr: true 
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when blackduck_automation_fixpr is set to 'true'
+#           blackduck_automation_fixpr: true 
+#           github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when blackduck_automation_fixpr is set to 'true'
           ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
           # include_diagnostics: true  
 
