@@ -23,9 +23,9 @@ jobs:
           DETECT_PROJECT_VERSION_NAME: ${{ github.ref_name }}
           DETECT_CODE_LOCATION_NAME: ${{ github.event.repository.name }}-${{ github.ref_name }}
         with:
-          network_air_gap: true
-#           synopsys_bridge_install_directory: "C:\\Users\\spurohit\\airgap-testing"
-#           bridge_download_url: "https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
+#           network_air_gap: true
+          synopsys_bridge_install_directory: "C:\\Users\\spurohit\\airgap-testing"
+          bridge_download_url: "https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-bridge/latest/synopsys-bridge-win64.zip"
 #           bridge_download_version: "0.3.1"
           blackduck_url: ${{ secrets.BLACKDUCK_URL }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN }}
