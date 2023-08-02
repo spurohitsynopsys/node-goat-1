@@ -24,7 +24,7 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         uses: synopsys-sig/synopsys-action@SIGINT-859
         with:
-          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-macosx.zip"
+          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.4.8/synopsys-bridge-0.4.8-macosx.zip"
           CoveRiTy_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           CoveritY_passphraSe: ${{ secrets.COVERITY_PASSPHRASE }}
