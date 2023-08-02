@@ -9,7 +9,7 @@ on:
   workflow_dispatch:  
 jobs:
   build:
-    runs-on: [ Windows ]
+    runs-on: [ mac ]
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
@@ -24,7 +24,7 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         uses: synopsys-sig/synopsys-action@SIGINT-859
         with:
-          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-win64.zip"
+          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-macosx.zip"
           CoveRiTy_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           CoveritY_passphraSe: ${{ secrets.COVERITY_PASSPHRASE }}
@@ -32,7 +32,7 @@ jobs:
           coverity_stream_name: ${{ github.event.repository.name }}-${{ github.ref_name }}
           coverity_policy_view: 'Outstanding Issues'
           # include_diagnostics: true
-          bridge_coverity_version: '2022.12.0'
+          # bridge_coverity_version: '2022.12.0'
           # coverity_install_directory: "/Users/spurohit/.bridge/tools/cov-thin-client/2022.12.0"
           # coverity_install_directory: "/Users/spurohit/synopsys-bridge"
           
