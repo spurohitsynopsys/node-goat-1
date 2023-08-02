@@ -18,7 +18,7 @@ jobs:
       #   with:
       #     java-version: 17
       #     distribution: microsoft
-      #     cache: maven  
+      #     cache: maven 
         
       - name: Coverity Full Scan
         if: ${{ github.event_name != 'pull_request' }}
