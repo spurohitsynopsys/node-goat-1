@@ -25,7 +25,7 @@ jobs:
         uses: synopsys-sig/synopsys-action@SIGINT-859
         with:
           # bridge_network_airgap: "true"
-          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-win64.zip"
+          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
           CoveRiTy_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           CoveritY_passphraSe: ${{ secrets.COVERITY_PASSPHRASE }}
