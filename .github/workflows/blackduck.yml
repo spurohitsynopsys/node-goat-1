@@ -33,8 +33,8 @@ jobs:
           coverity_stream_name: ${{ github.event.repository.name }}-${{ github.ref_name }}
           coverity_policy_view: 'Outstanding Issues'
           # include_diagnostics: true
-          bridge_coverity_version: '2022.12.0'
-          # coverity_install_directory: "/Users/spurohit/.bridge/tools/cov-thin-client/2022.12.0"
+          # bridge_coverity_version: '2022.12.0'
+          coverity_install_directory: "/Users/spurohit/.bridge/tools/cov-thin-client/2022.12.0"
           # coverity_install_directory: "/Users/spurohit/synopsys-bridge"
           
 #       - name: Black Duck Full Scan
