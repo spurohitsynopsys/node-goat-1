@@ -25,7 +25,7 @@ jobs:
         uses: synopsys-sig/synopsys-action@SIGINT-859
         with:
           # bridge_network_airgap: "true"
-          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
+          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/0.4.27/synopsys-bridge-0.4.27-linux64.zip"
           CoveRiTy_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           CoveritY_passphraSe: ${{ secrets.COVERITY_PASSPHRASE }}
@@ -34,7 +34,7 @@ jobs:
           coverity_policy_view: 'Outstanding Issues'
           # include_diagnostics: true
           # bridge_coverity_version: '2022.12.0'
-          coverity_install_directory: "/Users/spurohit/.bridge/tools/cov-thin-client/2022.12.0"
+          # coverity_install_directory: "/Users/spurohit/.bridge/tools/cov-thin-client/2022.12.0"
           # coverity_install_directory: "/Users/spurohit/synopsys-bridge"
           
 #       - name: Black Duck Full Scan
