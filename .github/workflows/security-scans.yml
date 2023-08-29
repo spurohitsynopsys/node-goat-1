@@ -1,0 +1,29 @@
+
+name: bd-sig-action 
+
+on:
+  push:
+    branches: [ main, master, develop, stage, release, cov-version ]
+  pull_request:
+    branches: [ main, master, develop, stage, release, cov-version ]
+jobs:
+  build:
+    runs-on: [ linux ]
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v3
+      - name: Coverity Full Scan
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: synopsys-sig/synopsys-action@SIGINT-1031
+        with:
+          coverity_url: ${{ secrets.COVERITY_URL }}
+          coverity_user: ${{ secrets.COVERITY_USER }}
+          coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
+          coverity_project_name: ${{ github.event.repository.name }}
+          coverity_stream_name: ${{ github.event.repository.name }}-${{ github.ref_name }}
+          coverity_policy_view: 'Outstanding Issues'
+          include_diagnostics: 'true'
+          bridge_coverity_version: '2023.3.2'
+          # coverity_install_directory: "/Users/spurohit/.bridge/tools/cov-thin-client/2022.12.1"
+          
+      
