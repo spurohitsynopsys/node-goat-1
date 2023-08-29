@@ -26,5 +26,3 @@ jobs:
           bridge_coverity_version: '2023.6.0'
           # bridge_coverity_version: '2023.3.2'
           # coverity_install_directory: "/Users/spurohit/.bridge/tools/cov-thin-client/2022.12.1"
-          
-      
