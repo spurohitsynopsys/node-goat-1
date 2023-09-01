@@ -15,7 +15,7 @@ jobs:
         with:
           bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
           polaris_serverUrl: ${{ secrets.POLARIS_SERVERURL_PIM }}
-          polaris_accessToken: ${{ secrets.POLARIS_ACCESSTOKEN_PIM }}
+          polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           polaris_application_name: ${{ github.event.repository.name }}
           polaris_project_name: ${{ github.event.repository.name }}
           polaris_assessment_types: "SAST"
