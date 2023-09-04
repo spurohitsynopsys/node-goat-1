@@ -58,7 +58,8 @@ jobs:
           ### Accepts Multiple Values
           # blackduck_scan_failure_severities: 'BLOCKER,CRITICAL'
           ### Uncomment below configuration to enable autoamtic fix pull request creation if vulnerabilities are reported
-          bridge_blackduck_fixpr_enabled: true
+          blackduck_automation_fixpr: true
+          # bridge_blackduck_fixpr_enabled: true
           # bridge_blackduck_fixpr_maxCount: 1
           # bridge_blackduck_fixpr_createSinglePR: true
 #           github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when blackduck_automation_fixpr is set to 'true'
