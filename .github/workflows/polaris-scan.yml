@@ -11,7 +11,7 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v3
       - name: Polaris PR Comment Scan
-        uses: synopsys-sig/synopsys-action@SIGINT-1034
+        uses: synopsys-sig/synopsys-action@SIGINT-1034-polaris
         with:
           bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
           polaris_serverUrl: ${{ secrets.POLARIS_SERVERURL_PIM }}
@@ -20,5 +20,6 @@ jobs:
           polaris_project_name: ${{ github.event.repository.name }}
           polaris_assessment_types: "SCA,SAST"
           bridge_polaris_prComment_enabled: true
+          bridge_polaris_prComment_severities: 'CRITICAL'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # include_diagnostics: true
