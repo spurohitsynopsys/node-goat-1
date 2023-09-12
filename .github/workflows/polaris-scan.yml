@@ -1,0 +1,23 @@
+  name: polaris-sig-action
+
+on:
+  pull_request:
+    branches: [ main, master, develop, stage, release ]
+jobs:
+  polaris-scan:
+    runs-on: [ linux ]
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v3
+      - name: Polaris PR Comment Scan
+        uses: synopsys-sig/synopsys-action@main
+        with:
+          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
+          polaris_serverUrl: ${{ secrets.POLARIS_SERVERURL_PIM }}
+          polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
+          polaris_application_name: ${{ github.event.repository.name }}
+          polaris_project_name: ${{ github.event.repository.name }}
+          polaris_assessment_types: "SCA,SAST"
+          bridge_polaris_prComment_enabled: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          include_diagnostics: true
