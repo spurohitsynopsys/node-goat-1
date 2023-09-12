@@ -1,11 +1,11 @@
 
-name: bd-sig-action 
+name: polaris-sig-action
 
 on:
   pull_request:
     branches: [ main, master, develop, stage, release ]
 jobs:
-  build:
+  polaris-sacn:
     runs-on: [ linux ]
     steps:
       - name: Checkout Source
@@ -20,6 +20,6 @@ jobs:
           polaris_project_name: ${{ github.event.repository.name }}
           polaris_assessment_types: "SCA,SAST"
           bridge_polaris_prComment_enabled: true
-          bridge_polaris_prComment_severities: 'CRITICAL'
+          bridge_polaris_prComment_severities: 'CRITICAL,HIGH'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # include_diagnostics: true
