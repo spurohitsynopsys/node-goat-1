@@ -20,5 +20,6 @@ jobs:
           polaris_project_name: ${{ github.event.repository.name }}
           polaris_assessment_types: "SCA,SAST"
           bridge_polaris_prComment_enabled: true
+          bridge_polaris_prComment_severities: 'CRITICAL'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           include_diagnostics: true
