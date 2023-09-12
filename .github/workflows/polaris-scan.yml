@@ -11,9 +11,9 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v3
       - name: Polaris PR Comment Scan
-        uses: synopsys-sig/synopsys-action@main
+        uses: synopsys-sig/synopsys-action@SIGINT-1116
         with:
-          # bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
+          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
           polaris_serverUrl: ${{ secrets.POLARIS_SERVERURL_PIM }}
           polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           polaris_application_name: ${{ github.event.repository.name }}
