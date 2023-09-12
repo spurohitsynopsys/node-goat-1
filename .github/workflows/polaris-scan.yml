@@ -22,4 +22,4 @@ jobs:
           bridge_polaris_prComment_enabled: true
           bridge_polaris_prComment_severities: 'CRITICAL,HIGH'
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # include_diagnostics: true
+          include_diagnostics: true
