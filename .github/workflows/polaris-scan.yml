@@ -1,4 +1,4 @@
-  name: polaris-sig-action
+name: polaris-sig-action
 
 on:
   pull_request:
