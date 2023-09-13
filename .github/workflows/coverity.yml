@@ -40,5 +40,4 @@ jobs:
           coverity_automation_prcomment: true
           github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when coverity_automation_prcomment is set to 'true'   
           ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
-          # include_diagnostics: true  
-        
+          # include_diagnostics: true
