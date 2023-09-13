@@ -1,8 +1,6 @@
 
 name: cnc-sig-action
 on:
-  push:
-    branches: [ main, master, develop, stage, release, cov-comment ]
   pull_request:
     branches: [ main, master, develop, stage, release ]
 jobs:
