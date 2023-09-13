@@ -1,23 +1,39 @@
-name: polaris-sig-action
-
+name: CI-Polaris
 on:
-  pull_request:
+  push:
     branches: [ main, master, develop, stage, release ]
+  pull_request:
+    branches: [ main, master, develop, stage, release ]  
 jobs:
   polaris-scan:
     runs-on: [ linux ]
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
-      - name: Polaris PR Comment Scan
-        uses: synopsys-sig/synopsys-action@SIGINT-1116
+  
+      - name: Polaris Full Scan
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: synopsys-sig/synopsys-action@main
         with:
-          bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
+          polaris_serverUrl: ${{ secrets.POLARIS_SERVERURL }}
+          polaris_accessToken: ${{ secrets.POLARIS_ACCESSTOKEN }}
+          polaris_application_name: ${{ github.event.repository.name }}
+          polaris_project_name: ${{ github.event.repository.name }}
+          polaris_assessment_types: "SCA,SAST"
+          ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
+          # include_diagnostics: true 
+          
+      - name: Polaris PR Scan
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: synopsys-sig/synopsys-action@main
+        with:
           polaris_serverUrl: ${{ secrets.POLARIS_SERVERURL_PIM }}
           polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           polaris_application_name: ${{ github.event.repository.name }}
           polaris_project_name: ${{ github.event.repository.name }}
           polaris_assessment_types: "SCA,SAST"
-          bridge_polaris_prComment_enabled: true
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          include_diagnostics: true
+          ### Below configuration is used to enable feedback from Polaris security testing as pull request comment
+          bridge_polaris_prComment_enabled: true 
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when bridge_polaris_prComment_enabled is set to 'true'
+          ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
+          # include_diagnostics: true
