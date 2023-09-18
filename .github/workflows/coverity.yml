@@ -20,7 +20,7 @@ jobs:
           coverity_stream_name: ${{ github.event.repository.name }}-${{ github.base_ref }}
           ### Below configuration is used to enable feedback from Coverity security testing as pull request comment
           coverity_automation_prcomment: true
-          coverity_local: true
+          # coverity_local: true
           github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when coverity_automation_prcomment is set to 'true'   
           ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
           include_diagnostics: true
