@@ -13,7 +13,7 @@ jobs:
       - name: Polaris PR Comment Scan
         uses: synopsys-sig/synopsys-action@SIGINT-1143
         with:
-          network_airgap: true
+          bridge_network_airgap: true
           # bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
           polaris_serverUrl: ${{ secrets.POLARIS_SERVERURL_PIM }}
           polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
