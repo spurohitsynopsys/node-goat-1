@@ -23,4 +23,4 @@ jobs:
         with:
           BlaCkDucK_UrL: ${{ secrets.BLACKDUCK_URL }}
           BlaCkdUck_aPITokEn: ${{ secrets.BLACKDUCK_API_TOKEN }}
-          upload-sarif: '/Users/spurohit/.bridge/SCA_SARIF.json'
+          upload_sarif_file: '/Users/spurohit/.bridge/SCA_SARIF.json'
