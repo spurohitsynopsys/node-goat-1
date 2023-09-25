@@ -3,7 +3,7 @@ name: bd-sig-action
 
 on:
   push:
-    branches: [ main, master, develop, stage, release ]
+    branches: [ main, master, develop, stage, release, sarif-test ]
   pull_request:
     branches: [ main, master, develop, stage, release ]
 jobs:
