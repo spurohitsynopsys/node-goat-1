@@ -1,12 +1,9 @@
-
 name: bd-sig-action 
 
 on:
   push:
     branches: [ main, master, develop, stage, release ]
-  pull_request:
-    branches: [ main, master, develop, stage, release ]
-  workflow_dispatch:  
+  # workflow_dispatch:  
 jobs:
   build:
     runs-on: [ linux ]

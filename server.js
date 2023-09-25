@@ -26,7 +26,7 @@ const httpsOptions = {
     cert: fs.readFileSync(path.resolve(__dirname, "./artifacts/cert/server.crt"))
 };
 */
-
+var token = "xyz"
 MongoClient.connect(db, (err, db) => {
     if (err) {
         console.log("Error: DB: connect");

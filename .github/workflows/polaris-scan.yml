@@ -1,0 +1,28 @@
+
+name: polaris-sig-action
+
+on:
+  pull_request:
+    branches: [ main, master, develop, stage, release ]
+jobs:
+  polaris-scan:
+    runs-on: [ linux ]
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v3
+      - name: Polaris PR Comment Scan
+        uses: synopsys-sig/synopsys-action@SIGINT-1143
+        with:
+          bridge_network_airgap: true
+          # bridge_download_url: "https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-linux64.zip"
+          polaris_serverUrl: ${{ secrets.POLARIS_SERVERURL_PIM }}
+          polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
+          polaris_application_name: ${{ github.event.repository.name }}
+          polaris_project_name: ${{ github.event.repository.name }}
+          polaris_assessment_types: "SCA"
+          polaris_prComment_enabled: true
+          polaris_prComment_severities: 'CRITICAL'
+          polaris_branch_parent_name: 'master'
+          polaris_branch_name: 'polaris-prcomment-test'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          include_diagnostics: true
