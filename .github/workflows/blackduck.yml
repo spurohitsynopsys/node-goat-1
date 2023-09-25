@@ -24,3 +24,4 @@ jobs:
           BlaCkDucK_UrL: ${{ secrets.BLACKDUCK_URL }}
           BlaCkdUck_aPITokEn: ${{ secrets.BLACKDUCK_API_TOKEN }}
           upload_sarif_file: '/Users/spurohit/.bridge/SCA_SARIF.json'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
