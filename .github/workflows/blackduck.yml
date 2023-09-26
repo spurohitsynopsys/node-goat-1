@@ -15,7 +15,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: /Users/spurohit/.bridge/SAST_SARIF.sarif
+          sarif_file: '/Users/spurohit/.bridge/SAST_SARIF.sarif'
           # Optional category for the results
           # Used to differentiate multiple results for one commit
           # category: my-analysis-tool
@@ -23,4 +23,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: SAST_SARIF
-          path: SAST_SARIF.sarif
+          path: '/Users/spurohit/.bridge/SAST_SARIF.sarif'
