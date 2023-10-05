@@ -21,5 +21,7 @@ jobs:
         with:
           BlaCkDucK_UrL: ${{ secrets.BLACKDUCK_URL }}
           BlaCkdUck_aPITokEn: ${{ secrets.BLACKDUCK_API_TOKEN }}
-          upload_sarif_file: '/Users/spurohit/.bridge/polaris_results.sarif.json'
+          blackduck_scan_full: false
+          reports_sarif_create: true
+          reports_sarif_file_path: '/Users/spurohit/.bridge/polaris_results.sarif.json'
           github_token: ${{ secrets.GITHUB_TOKEN }}
