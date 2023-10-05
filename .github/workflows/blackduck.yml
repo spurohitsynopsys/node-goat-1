@@ -24,4 +24,4 @@ jobs:
           blackduck_scan_full: false
           reports_sarif_create: true
           reports_sarif_file_path: '/Users/spurohit/.bridge/polaris_results.sarif.json'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
