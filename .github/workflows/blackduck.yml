@@ -1,22 +1,22 @@
-name: detect-action
+name: security-scan 
 on:
   push:
     branches: [ main, master, develop, stage, release ]
   pull_request:
-    branches: [ main, master, develop, stage, release ]
+    branches: [ main, master, develop, stage, release ]  
 jobs:
-  build:
+  polaris-scan:
     runs-on: [ mac ]
     steps:
       - name: Checkout Source
-        uses: actions/checkout@v3  
-      - name: Run Synopsys Detect
-        uses: synopsys-sig/detect-action@v0.3.3
+        uses: actions/checkout@v3
+  
+      - name: Black Duck Scan
+        uses: synopsys-sig/synopsys-action@SIGINT-1237
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            detect-version: 8.2.0
-            blackduck-url: ${{ secrets.BLACKDUCK_URL_US03 }}
-            blackduck-api-token: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}  
-            scan-mode: RAPID
+          blackduck_url: ${{ secrets.BLACKDUCK_URL_US03 }}
+          blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
+          blackduck_fixpr_enabled: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
