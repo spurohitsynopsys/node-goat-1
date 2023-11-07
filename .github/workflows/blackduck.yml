@@ -18,5 +18,5 @@ jobs:
         with:
           blackduck_url: ${{ secrets.BLACKDUCK_URL_US03 }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
-          blackduck_fixpr_enabled: true
+          blackduck_automation_prcomment: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
