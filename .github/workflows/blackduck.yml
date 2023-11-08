@@ -21,3 +21,4 @@ jobs:
           blackduck_automation_prcomment: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
           include_diagnostics: true
+          blackduck_fixpr_enabled: true
