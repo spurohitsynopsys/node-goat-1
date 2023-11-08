@@ -20,4 +20,3 @@ jobs:
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
           blackduck_fixpr_enabled: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          blackduck_automation_prcomment: true
