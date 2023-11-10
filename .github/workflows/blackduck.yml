@@ -15,11 +15,11 @@ jobs:
         with:
           node-version: 16  
       - name: Black Duck Scan
-        uses: synopsys-sig/synopsys-action@SIGINT-1237
+        uses: synopsys-sig/synopsys-action@SIGINT-1189
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         with:
           blackduck_url: ${{ secrets.BLACKDUCK_URL_US03 }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
-          blackduck_fixpr_enabled: true
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reports_sarif_create: true
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
