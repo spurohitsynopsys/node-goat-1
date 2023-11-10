@@ -22,4 +22,5 @@ jobs:
           blackduck_url: ${{ secrets.BLACKDUCK_URL_US03 }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
           reports_sarif_create: true
+          reports_sarif_file_path: /Users/spurohit/.bridge/SAST_SARIF.sarif
           # github_token: ${{ secrets.GITHUB_TOKEN }}
