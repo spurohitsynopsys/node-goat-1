@@ -24,4 +24,4 @@ jobs:
           reports_sarif_create: true
           reports_sarif_file_path: /Users/spurohit/.bridge/SAST_SARIF.sarif
           upload_sarif_result: true
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_TOKEN }}
