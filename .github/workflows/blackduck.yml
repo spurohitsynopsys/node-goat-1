@@ -15,13 +15,14 @@ jobs:
         with:
           node-version: 16  
       - name: Black Duck Scan
-        uses: synopsys-sig/synopsys-action@SIGINT-1189
+        uses: synopsys-sig/synopsys-action@SIGINT-1236
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         with:
-          blackduck_url: ${{ secrets.BLACKDUCK_URL_US03 }}
-          blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
-          reports_sarif_create: true
-          reports_sarif_file_path: /Users/spurohit/.bridge/SAST_SARIF.sarif
-          upload_sarif_result: true
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          synopsys_bridge_download_url: https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-bridge/latest/synopsys-bridge-macosx.zip
+          polaris_server_url: ${{ secrets.POLARIS_SERVERURL_PIM }}
+          # polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
+          # reports_sarif_create: true
+          # reports_sarif_file_path: /Users/spurohit/.bridge/SAST_SARIF.sarif
+          # upload_sarif_result: true
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
