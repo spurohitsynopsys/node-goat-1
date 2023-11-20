@@ -21,6 +21,8 @@ jobs:
         with:
           synopsys_bridge_download_url: https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-bridge/latest/synopsys-bridge-macosx.zip
           polaris_server_url: ${{ secrets.POLARIS_SERVERURL_PIM }}
+          polaris_accessToken: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
+          polaris_assessment_types: 'SCA'
           # polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           # reports_sarif_create: true
           # reports_sarif_file_path: /Users/spurohit/.bridge/SAST_SARIF.sarif
