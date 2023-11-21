@@ -23,8 +23,8 @@ jobs:
           polaris_server_url: ${{ secrets.POLARIS_SERVERURL_PIM }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           # polaris_project_name: 'node-goat-1'
-          polaris_application_name: 'node-goat-1'
-          polaris_assessment_types: 'SCA'
+          # polaris_application_name: 'node-goat-1'
+          polaris_assessment_types: 'SAST'
           # polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           # reports_sarif_create: true
           # reports_sarif_file_path: /Users/spurohit/.bridge/SAST_SARIF.sarif
