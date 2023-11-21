@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 16  
       - name: Black Duck Scan
-        uses: synopsys-sig/synopsys-action@1.5.0
+        uses: synopsys-sig/synopsys-action@v1.5.0
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         with:
