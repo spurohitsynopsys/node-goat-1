@@ -19,11 +19,10 @@ jobs:
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         with:
-          synopsys_bridge_download_url: https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-bridge/2.0.0/synopsys-bridge-2.0.0-macosx.zip
+          # synopsys_bridge_download_url: https://sig-repo.synopsys.com/artifactory/bds-integrations-release/com/synopsys/integration/synopsys-bridge/2.0.0/synopsys-bridge-2.0.0-macosx.zip
+          bridge_download_version: 2.0.0
           polaris_server_url: ${{ secrets.POLARIS_SERVERURL_PIM }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
-          # polaris_project_name: 'node-goat-1'
-          # polaris_application_name: 'node-goat-1'
           polaris_assessment_types: 'SAST'
           # polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           # reports_sarif_create: true
