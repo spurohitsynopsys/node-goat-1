@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 16  
       - name: Black Duck Scan
-        uses: synopsys-sig/synopsys-action@v1.5.0
+        uses: synopsys-sig/synopsys-action@SIGINT-1236
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         with:
@@ -23,6 +23,7 @@ jobs:
           # synopsys_bridge_download_version: 2.0.0
           COVERITY_URL: ${{ secrets.COVERITY_URL }}
           COVERITY_PASSPHRASE: ${{ secrets.COVERITY_PASSPHRASE }}
+          coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_prComment_enabled: true
           # polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           # reports_sarif_create: true
