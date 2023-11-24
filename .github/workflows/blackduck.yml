@@ -23,9 +23,9 @@ jobs:
           # synopsys_bridge_download_version: 2.0.0
           BLACKDUCK_URL: ${{ secrets.BLACKDUCK_URL_US03 }}
           BLACKDUCK_TOKEN: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
-          blackduck_prComment_enabled: true
+          blackduck_fixpr_enabled: true
           # polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           # reports_sarif_create: true
           # reports_sarif_file_path: /Users/spurohit/.bridge/SAST_SARIF.sarif
           # upload_sarif_result: true
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
