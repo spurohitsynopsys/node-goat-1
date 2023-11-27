@@ -22,7 +22,7 @@ jobs:
           bridge_download_url: ${{ secrets.INTERNAL_ARTIFACTORY_URL }}/2.0.14/synopsys-bridge-2.0.14-macosx.zip
           # synopsys_bridge_download_version: 2.0.0
           BLACKDUCK_URL: ${{ secrets.BLACKDUCK_URL_US03 }}
-          BLACKDUCK_TOKEN: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
+          blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
           blackduck_fixpr_enabled: true
           # polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
           # reports_sarif_create: true
