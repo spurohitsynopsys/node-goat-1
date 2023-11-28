@@ -5,17 +5,17 @@ on:
   pull_request:
     branches: [ main, master, develop, stage, release ]  
 jobs:
-  polaris-scan:
+  cov-scan:
     runs-on: [ mac ]
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
-      - name: Black Duck Scan
+      - name: Coverity Scan
         uses: synopsys-sig/synopsys-action@SIGINT-1301
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         with:
-          bridge_download_url: ${{ secrets.INTERNAL_ARTIFACTORY_URL }}/2.0.7/synopsys-bridge-2.0.7-macosx.zip
+          bridge_download_url: ${{ secrets.INTERNAL_ARTIFACTORY_URL }}/2.0.14/synopsys-bridge-2.0.14-macosx.zip
           coverity_url: ${{ secrets.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
