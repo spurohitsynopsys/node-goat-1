@@ -21,8 +21,5 @@ jobs:
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
           coverity_project_name: ${{ secrets.COVERITY_PROJECT_NAME }}
           coverity_automation_prcomment: true
-          # polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
-          # reports_sarif_create: true
-          # reports_sarif_file_path: /Users/spurohit/.bridge/SAST_SARIF.sarif
-          # upload_sarif_result: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          include_diagnostics: true
