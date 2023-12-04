@@ -22,4 +22,4 @@ jobs:
           coverity_project_name: ${{ secrets.COVERITY_PROJECT_NAME }}
           coverity_automation_prcomment: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          include_diagnostics: true
+          include_diagnostics: true 
