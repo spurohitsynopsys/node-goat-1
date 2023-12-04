@@ -23,4 +23,4 @@ jobs:
           coverity_stream_name: ${{ github.event.repository.name }}-${{ github.base_ref }}
           coverity_automation_prcomment: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # include_diagnostics: true 
+          include_diagnostics: true 
