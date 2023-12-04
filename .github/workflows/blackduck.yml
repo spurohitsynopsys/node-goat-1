@@ -5,26 +5,27 @@ on:
   pull_request:
     branches: [ main, master, develop, stage, release ]  
 jobs:
-  polaris-scan:
+  blackduck-scan:
     runs-on: [ mac ]
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
-      - name: Polaris Scan
+      - name: Black Duck Scan
         uses: synopsys-sig/synopsys-action@main
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
         with:
           synopsys_bridge_download_url: ${{ secrets.INTERNAL_ARTIFACTORY_URL }}/2.0.14/synopsys-bridge-2.0.14-macosx.zip
           # synopsys_bridge_download_version: 2.0.0
-          # BLACKDUCK_URL: ${{ secrets.BLACKDUCK_URL_US03 }}
-          # blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
-          # blackduck_fixpr_enabled: true
-          polaris_server_url: ${{ secrets.POLARIS_SERVERURL_PIM }}
-          polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
-          polaris_prComment_enabled: true
-          polaris_assessment_types: 'SASt'
+          BLACKDUCK_URL: ${{ secrets.BLACKDUCK_URL_US03 }}
+          blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
+          blackduck_fixpr_enabled: true
+          # polaris_server_url: ${{ secrets.POLARIS_SERVERURL_PIM }}
+          # polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN_PIM }}
+          # polaris_prComment_enabled: true
+          # polaris_assessment_types: 'SASt'
           # reports_sarif_create: true
           # reports_sarif_file_path: /Users/spurohit/.bridge/SAST_SARIF.sarif
           # upload_sarif_result: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          include_diagnostics: true
