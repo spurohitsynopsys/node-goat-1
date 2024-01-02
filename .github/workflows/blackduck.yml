@@ -11,12 +11,12 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v3
       - name: Black Duck Scan
-        uses: synopsys-sig/synopsys-action@v1.5.0
+        uses: synopsys-sig/synopsys-action@SIGINT-1409
         env:
           DETECT_PROJECT_NAME: ${{ github.event.repository.name }}
           BLACKDUCK_TRUST_CERT: true
         with:
-          bridge_download_url: ${{ secrets.INTERNAL_ARTIFACTORY_URL }}/2.0.30/synopsys-bridge-2.0.30-macosx.zip
+          # bridge_download_url: ${{ secrets.INTERNAL_ARTIFACTORY_URL }}/2.0.30/synopsys-bridge-2.0.30-macosx.zip
           # synopsys_bridge_download_version: 2.0.0
           BLACKDUCK_URL: ${{ secrets.BLACKDUCK_URL_VIN }}
           blackduck_apiToken: ${{ secrets.BLACKDUCK_API_TOKEN_VIN }}
