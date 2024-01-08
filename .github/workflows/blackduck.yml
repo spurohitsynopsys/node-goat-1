@@ -19,6 +19,7 @@ jobs:
           DETECT_PROJECT_VERSION_NAME: ${{ github.ref_name }}
           DETECT_CODE_LOCATION_NAME: ${{ github.event.repository.name }}-${{ github.ref_name }}
         with:
+          bridge_download_url: https://artifactory.internal.synopsys.com/artifactory/clops-local/clops.sig.synopsys.com/synopsys-bridge/latest/synopsys-bridge-macos_arm.zip
           BlaCkDucK_UrL: ${{ secrets.BLACKDUCK_URL_US03 }}
           BlaCkdUck_aPITokEn: ${{ secrets.BLACKDUCK_API_TOKEN_US03 }}
           blackduck_reports_sarif_create: true
